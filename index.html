@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*{
+			box-sizing:border-box;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+		}
+
+		ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+			margin-bottom: 10px;
+            
+           
+            
+        }
+        ul::after{
+            content:"";
+            clear: both;
+            display: table;
+        }
+
+        li{
+            float: left;
+            
+                
+        }
+
+        li a{
+            display: inline-block;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            
+            
+            
+        }
+
+        li a:hover{
+            background-color: grey;
+        }
+        .class{
+            float: right;
+        }
+        img{
+            margin: 0;
+            padding: 0;
+            width: 30px;
+            height: auto;
+        }
+
+		.col-25{
+			float: left;
+			width: 25%;
+			margin-top: 10px;
+		}
+		.col-75{
+			float: left;
+			width: 75%;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.row::after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+		input[type=text],select,textarea{
+			width: 100%;
+			border:1px solid rgb(52, 72, 92);
+			padding: 15px;
+			border-radius: 5px;
+			resize: vertical;
+		}
+		input[type=submit]{
+			background-color:rgb(52, 72, 92);
+			color: white;
+			padding: 15px 20px;
+			border:none;
+			float: right;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		input[type=submit]:hover{
+			background-color: rgb(11, 86, 133);
+		}
+		.container{
+			padding: 20px;
+			background-color:grey;
+			border-radius: 5px;
+			margin: 0px 10px;
+		}
+
+		@media screen and (max-width:768px){
+			.col-25,.col-75,input[type=submit]{
+				width: 100%;
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+	<ul>
+        <li style="background-color: red;"><a href="#Home">Home</a></li>
+        <li><a href="#News">News</a></li>
+        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#About">About</a></li>
+        <li class="class"><a href="#İnstagram">Instagram</a></li>
+        <li  class="class"><a href="#X">X</a></li>
+        <li  class="class"><a href="#Whatsapp" >Whatsapp</a></li>
+    </ul>
+
+
+	<div class="container">
+		<form action="/Home/Formdoldur/">
+			<div class="row">
+				<div class="col-25">
+					<label for="firstname">Firstname</label>
+				</div>
+				<div class="col-75">
+					<input type="text" name="firstname" placeholder="First name">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-25">
+					<label for="lastname">Firstname</label>
+				</div>
+				<div class="col-75">
+					<input type="text" name="lastname" placeholder="Last name">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-25">
+					<label for="country">Country</label>
+				</div>
+				<div class="col-75">
+					<select name="country" id="">
+						<option value="tr">Türkiye</option>
+						<option value="fr">Français</option>
+						<option value="en">England</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-25">
+					<label for="subject">Subject</label>
+				</div>
+				<div class="col-75">
+					<textarea name="subject" placeholder="..." style="height: 150px;"></textarea>
+				</div>
+			</div>
+
+			<div class="row">
+				<input type="submit" value="Save">
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>
